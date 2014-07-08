@@ -1,0 +1,39 @@
+add_network_node PC pc1 4096 Larry
+add_network_node printer pr1 2048 5
+add_network_node server s1 8192 TECH
+add_network_node PC pc2 384 Julia
+system_status
+create_file pc1 f1 20
+123456789
+abcdefghi
+create_file pc1 f2 70
+111111111
+222222222
+333333333
+444444444
+555555555
+666666666
+777777777
+create_file pc1 f3 70
+aaaaaaaaa
+bbbbbbbbb
+ccccccccc
+ddddddddd
+eeeeeeeee
+fffffffff
+ggggggggg
+ls pc1
+transfer_file pc1 pr1 f1
+transfer_file pc1 pr1 f3
+ls pr1
+print_files pr1 f1 f3 f4
+delete_files pr1 f1 f2 f3 
+ls pr1
+transfer_file pc1 pc2 f1
+transfer_file pc1 pc2 f2
+transfer_file pc1 pc2 f3
+transfer_file pc1 pr1 f4
+ls pc2
+ls pr1
+system_status
+halt
